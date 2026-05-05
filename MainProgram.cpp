@@ -130,9 +130,9 @@ IntArray::IntArray(int cap) {
     // TODO 6: Allocate dynamic array of size cap using 'new'
     //         Initialize capacity, count
     //         Notify Tracker that an object was created
-    data= new int[capacity];
     capacity=cap;
     count=0;
+    data= new int[capacity];
     Tracker::objectCreated();
     
 
@@ -222,17 +222,15 @@ int IntArray::getCapacity() const {
 // isEmpty
 bool IntArray::isEmpty() const {
     // TODO 14: Return true if count == 0
-    if(count == 0){
-        return true;   
-    }
-    return false;
+    
+    return count==0;
 }
 
 // Remove last element
 bool IntArray::removeLast() {
     // TODO 15: If not empty, decrement count and return true.
     //          Otherwise return false.
-    if(count != 0){
+    if(count = 0){
         count--;
         return true;   
     }
