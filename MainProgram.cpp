@@ -202,7 +202,7 @@ int IntArray::get(int index) const {
     // TODO 11: If index is valid (0 <= index < count), return data[index].
     //          Otherwise return -1.
     if(0<=index && index < count){
-        return index;
+        return data[index];
     }
     return -1;
 }
