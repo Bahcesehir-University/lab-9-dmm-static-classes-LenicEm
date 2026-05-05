@@ -151,11 +151,13 @@ IntArray::IntArray(const IntArray& other) {
     // TODO 8: Deep copy - allocate new memory and copy elements
     //         Don't forget to copy capacity and count
     //         Notify Tracker that an object was created
+    if(this != &other){
     capacity=other.capacity;
     count=other.count;
     data= new int[capacity];
     for (int i = 0; i < count; i++){
         data[i] = other.data[i];
+    }
     }
     cout <<"New object was created";
 }
@@ -173,7 +175,7 @@ IntArray& IntArray::operator=(const IntArray& other) {
         delete[] data;
         capacity=other.capacity;
         count=other.count;
-        data =  new int[other.capacity];
+        data = new int[other.capacity];
         for(int i=0;i<count; i++){
             data[i] = other.data[i];
         }
