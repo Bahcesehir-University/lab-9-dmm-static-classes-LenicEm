@@ -130,8 +130,9 @@ IntArray::IntArray(int cap) {
     // TODO 6: Allocate dynamic array of size cap using 'new'
     //         Initialize capacity, count
     //         Notify Tracker that an object was created
-    new int [cap];
+    data= new int [capacity];
     capacity=cap;
+    count=0;
     cout <<"New object was created";
     
 
@@ -142,7 +143,7 @@ IntArray::~IntArray() {
     // TODO 7: Free the dynamic array using 'delete[]'
     //         Notify Tracker that an object was destroyed
     delete[] data;
-    cout <<"New object was destroyed";
+    Tracker::objectDestroyed();
 }
 
 // Copy Constructor
