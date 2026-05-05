@@ -130,10 +130,10 @@ IntArray::IntArray(int cap) {
     // TODO 6: Allocate dynamic array of size cap using 'new'
     //         Initialize capacity, count
     //         Notify Tracker that an object was created
-    data= new int [capacity];
+    data= new int[capacity];
     capacity=cap;
     count=0;
-    cout <<"New object was created";
+    Tracker::objectCreated();
     
 
 }
@@ -159,7 +159,7 @@ IntArray::IntArray(const IntArray& other) {
         data[i] = other.data[i];
     }
     }
-    cout <<"New object was created";
+    Tracker::objectCreated();
 }
 
 // Copy Assignment Operator
